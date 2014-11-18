@@ -1,0 +1,13 @@
+.site-footer {
+    background: #222;
+    padding: 2em 0 3em;
+
+    h3 {
+        margin: 0;
+        color: lighten($midgrey, 10);
+    }
+
+    a {
+        color: lighten($midgrey, 20);
+    }
+}

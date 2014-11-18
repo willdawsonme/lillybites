@@ -1,0 +1,23 @@
+// Mixins
+$breakpoints: (
+  "baby-bear"  : "(max-width: 35em)",
+  "mama-bear"  : "(max-width: 50em)"
+) !default;
+
+@mixin breakpoint($point) {
+  $query: map-get($breakpoints, $point);
+
+  @media #{$query} {
+    @content;
+  }
+}
+
+// Variables
+$ginger: #BB854A;
+
+$darkgrey: #333333;
+$midgrey: #777777;
+$lightgrey: #EEEEEE;
+
+$br: 5px;
+$padding: 3em;
