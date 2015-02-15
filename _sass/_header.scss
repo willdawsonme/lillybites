@@ -1,5 +1,5 @@
 .site-header {
-    background: url(../images/header.jpg);
+    background: url(http://static.tumblr.com/ld05yvk/FFnnf84wy/header.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -25,7 +25,9 @@
         a {
             color: #FFF;
 
-
+            &:hover, &:focus {
+                color: rgba(255,255,255,0.75);
+            }
         }
 
         &::before {
@@ -33,6 +35,12 @@
             display: inline-block;
             margin: 0 10px;
             color: rgba(255,255,255,0.50);
+
+            @include breakpoint(baby-bear) {
+                content: "";
+                margin: 0 5px;
+            }
+
         }
 
         &:first-child::before {

@@ -1,0 +1,24 @@
+.pagination {
+    margin: -1em 0 2em 0;
+    text-align: center;
+
+    a {
+        color: $midgrey;
+        margin: 0;
+        display: inline-block;
+
+        &:hover, &:focus {
+            color: darken($midgrey, 20);
+        }
+    }
+
+    .next:before,
+    .prev:after {
+        content: "\00b7";
+        margin: 0 0.5em;
+    }
+
+    .archive {
+        font-weight: bold;
+    }
+}

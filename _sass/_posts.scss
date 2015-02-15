@@ -1,10 +1,67 @@
 .post {
-    margin: 0 0 $padding 0;
-    line-height: 1.9;
-    font-size: 18px;
+    margin: $padding 0;
+    //border-bottom: 1px solid $lightgrey;
 
-    h2 {
-        color: $ginger;
+    &::after {
+        content: " ";
+        display: block;
+        width: 5em;
+        height: 2px;
+        background: $lightgrey;
+        margin: $padding auto;
+    }
+
+    h1, h2 {
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        a {
+            color: lighten($midgrey, 10);
+            border-bottom: 1px solid $lightgrey;
+        }
+    }
+
+    .post-footer {
+        margin-top: 1em;
+        color: lighten($midgrey, 25);
+
+        a {
+            color: lighten($midgrey, 25);
+
+            &:hover, &:focus {
+                color: $midgrey;
+            }
+        }
+
+        ul {
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 1em 0 0;
+        }
+
+        & > div {
+            display: inline-block;
+        }
+
+        .actions {
+            float: right;
+            text-align: right;
+
+            li {
+                margin: 0 0 0 1em;
+            }
+        }
+    }
+
+    ul, ol {
+        margin: 0 0 1em 0;
     }
 
     ul {
@@ -13,5 +70,83 @@
 
     li {
         margin: 0 0 0.5em 2em;
+    }
+
+    figure > a {
+        display: block;
+        margin: 0 -2em;
+    }
+
+    figure {
+        margin: 0 0 1rem 0;
+    }
+
+    img {
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .caption {
+        margin: 1em 0 0 0;
+    }
+
+    blockquote {
+        margin: 0 0 1em 0;
+        padding: 0 0 0 1em;
+        border-left: 1px solid $lightgrey;
+    }
+}
+
+.type-chat {
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        margin: 0 0 1em 0;
+    }
+
+    .person {
+        display: block;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: lighten($midgrey, 25);
+    }
+}
+
+.type-quote {
+    blockquote {
+        font-size: 1.25em;
+        padding: 0;
+        border: none;
+    }
+}
+
+.type-answer {
+    img {
+        float: left;
+        display: inline-block;
+        width: 32px;
+        margin: 0 10px 0 0;
+        border-radius: 16px;
+    }
+
+    .asker {
+        line-height: 32px;
+
+        a {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+
+    .question {
+        font-size: 20px;
+        margin: 1em 0;
+    }
+
+    hr {
+        margin: 2em 0;
     }
 }

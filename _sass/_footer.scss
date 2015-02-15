@@ -1,6 +1,7 @@
 .site-footer {
     background: #222;
-    padding: 2em 0 3em;
+    padding: 2em 0;
+    color: $midgrey;
 
     h3 {
         margin: 0;
@@ -9,5 +10,9 @@
 
     a {
         color: lighten($midgrey, 20);
+
+        &:hover, &:focus {
+            color: $midgrey;
+        }
     }
 }

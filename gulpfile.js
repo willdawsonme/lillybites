@@ -23,6 +23,7 @@ gulp.task('default', ['fileinclude', 'sass', 'svgstore', 'imagemin', 'browser-sy
     gulp.watch('_pages/**/*.html', ['fileinclude']);
     gulp.watch('_includes/**', ['fileinclude']);
     gulp.watch('_images/**', ['imagemin']);
+    gulp.watch('_site/css/global.css', ['fileinclude']);
     gulp.watch('_site/*.html', ['bs-reload']);
 });
 

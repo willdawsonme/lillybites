@@ -11,19 +11,20 @@ html {
 }
 
 body {
-    font-family: "omnes-pro", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-style: normal;
     line-height: 1.7;
-    color: $midgrey;
+    color: $darkgrey;
     -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
+    transition: color .2s linear;
     color: $ginger;
 
-    p & {
+    &:hover, &:focus {
         color: darken($ginger, 10);
     }
 }
@@ -33,8 +34,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: inherit;
 }
 
-h1, h2 {
-
+h1, h2, h3 {
+    font-family: "europa", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -59,7 +60,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 0 0 0.4rem 0;
 }
 
@@ -69,10 +70,11 @@ p {
 
 hr {
     border: 0;
-    border-bottom: 1px solid $lightgrey;
+    background: $lightgrey;
     margin: 0 0 $padding 0;
-    height: 1px;
-    width: 20%;
+    height: 2px;
+    width: 5em;
+    text-align: left;
 }
 
 input, textarea {
