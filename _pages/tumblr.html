@@ -11,7 +11,12 @@
 	<link rel="canonical" href="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}">
 	<link rel="alternate" type="application/rss+xml" href="{RSS}">
 	{block:Hidden}
+		<meta name="image:Header" content="{HeaderImage}"/>
  		<meta name='text:Disqus Shortname' content='' />
+ 		<meta name='if:Enable Featured Post' content="0"/>
+ 		<meta name='text:Featured Title' content=""/>
+ 		<meta name='text:Featured Subtitle' content=""/>
+ 		<meta name='text:Featured URL' content=""/>
  	{/block:Hidden}
 	<style type="text/css">
 		@@include('../_site/css/global.css')
@@ -191,6 +196,14 @@
 					</ul>
 				</div>
 			</nav>
+			{block:IfEnableFeaturedPost}
+			<div class="featured-post">
+			    <a href="{text:Featured URL}">
+			        {text:Featured Title}
+			        <div class="featured-post__read">{text:Featured Subtitle}</div>
+			    </a>
+			</div>
+			{/block:IfEnableFeaturedPost}
 		</header>
 
 		<main>

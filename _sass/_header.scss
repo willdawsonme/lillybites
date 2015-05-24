@@ -1,18 +1,17 @@
 .site-header {
-    background: url(http://static.tumblr.com/ld05yvk/FFnnf84wy/header.jpg);
+    background: url({image:Header});
     background-position: center center;
     background-size: cover;
-}
-
-.site-navigation {
-    text-align: center;
+    position: relative;
     padding: $padding 0;
+    text-align: center;
 
     @include breakpoint(baby-bear) {
         padding: 2em 0;
     }
+}
 
-
+.site-navigation {
     ul {
         list-style: none;
     }
@@ -74,4 +73,45 @@ $logoHeight: 175px;
         }
     }
 
+}
+
+.featured-post {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    text-align: right;
+    line-height: 1.2;
+
+    a {
+        color: rgba(255, 255, 255, 1.00);
+        font-weight: bold;
+        transition: color 0.2s linear;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.75);
+
+            .featured-post__read {
+                color: rgba(255, 255, 255, 0.50);
+            }
+        }
+    }
+
+    @include breakpoint(mama-bear) {
+        position: static;
+        bottom: auto;
+        right: auto;
+        text-align: center;
+        padding: 1.5rem 0 0;
+    }
+}
+
+.featured-post__read {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Georgia, serif;
+    font-size: 0.90em;
+    font-weight: normal;
+    font-style: italic;
+
+    transition: color 0.2s linear;
 }
