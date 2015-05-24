@@ -31,12 +31,10 @@ gulp.task('default', ['fileinclude', 'sass', 'svgstore', 'imagemin', 'browser-sy
  * SASS Processing
  */
 gulp.task('sass', function() {
-    return gulp.src('_sass/global.scss')
-        .pipe(changed('_site/css'))
-        .pipe(sass({
-            style: 'compressed'
-        }))
-        .on('error', function() {
+    return sass('_sass/global.scss', {style: 'compressed'})
+        // .pipe(changed('_site/css'))
+        .on('error', function(err) {
+            console.error('Error', err.message);
             notify.onError().apply(this, arguments);
             this.emit('end');
         })

@@ -1,15 +1,15 @@
 {
   "devDependencies": {
-    "browser-sync": "^1.6.1",
-    "gulp": "^3.8.8",
-    "gulp-autoprefixer": "^1.0.1",
-    "gulp-changed": "^1.0.0",
-    "gulp-file-include": "^0.5.1",
-    "gulp-filter": "^1.0.2",
-    "gulp-imagemin": "^2.0.0",
-    "gulp-notify": "^2.0.1",
-    "gulp-ruby-sass": "^0.7.1",
-    "gulp-svgmin": "^0.4.6",
-    "gulp-svgstore": "^1.0.1"
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-changed": "*",
+    "gulp-file-include": "*",
+    "gulp-filter": "*",
+    "gulp-imagemin": "*",
+    "gulp-notify": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-svgmin": "*",
+    "gulp-svgstore": "*"
   }
 }
